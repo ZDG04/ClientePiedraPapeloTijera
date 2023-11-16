@@ -1,4 +1,5 @@
 import pygame
+pygame.font.init()
 
 WIDTH =  400
 HEIGHT = 400
@@ -10,10 +11,7 @@ win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Client")
 
 
-
-
 class Button:
-    pygame.font.init()
     def __init__(self, text, x, y, color):
         self.text = text
         self.x = x

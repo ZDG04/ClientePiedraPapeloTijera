@@ -1,15 +1,12 @@
 import pygame
 from network import Network
 from view import scoreUpdate, redrawWindow,win, WIDTH, HEIGHT, btns
-
-
-n = Network()
-
+pygame.font.init()
 
 def main():
     run = True
     clock = pygame.time.Clock()
-    
+    n = Network()
     player = int(n.getPlayer())  
     print("You are Player ", player)
 
