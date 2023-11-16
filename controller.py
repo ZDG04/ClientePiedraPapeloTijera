@@ -2,17 +2,15 @@ import pygame
 from network import Network
 from view import scoreUpdate, redrawWindow,win, WIDTH, HEIGHT, btns
 
-# Se mantiene el mismo código para la clase Button, scoreUpdate, y redrawWindow
 
-# Crea una instancia de la clase Network para manejar la conexión con el servidor
 n = Network()
 
-# La función main ahora maneja la lógica del cliente
+
 def main():
     run = True
     clock = pygame.time.Clock()
-
-    player = int(n.getPlayer())  # Obtiene el jugador del servidor (0 o 1)
+    
+    player = int(n.getPlayer())  
     print("You are Player ", player)
 
     scores = [0, 0, 0]
@@ -68,7 +66,6 @@ def main():
 
         redrawWindow(win, game, player, scores)
 
-# Función para el menú (landing page)
 def menu():
     run = True
     clock = pygame.time.Clock()

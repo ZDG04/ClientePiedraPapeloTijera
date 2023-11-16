@@ -1,8 +1,5 @@
 import pygame
 
-# Inicializa Pygame
-
-# Define el ancho y la altura de la ventana del juego
 WIDTH =  400
 HEIGHT = 400
 
@@ -13,7 +10,10 @@ win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Client")
 
 
+
+
 class Button:
+    pygame.font.init()
     def __init__(self, text, x, y, color):
         self.text = text
         self.x = x
@@ -41,6 +41,7 @@ class Button:
             return False
         
 def scoreUpdate(game, p, scores):
+    pygame.font.init()
     # Actualiza las puntuaciones
     if game.findWinner() == -1: 
         scores[2] += 1
@@ -51,6 +52,7 @@ def scoreUpdate(game, p, scores):
             scores[1] += 1
 
 def redrawWindow(win, game, p, scores):  
+    pygame.font.init()
     # Redibuja la ventana del juego
     win.fill((255, 255, 255))
 
